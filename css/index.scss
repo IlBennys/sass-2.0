@@ -1,0 +1,56 @@
+$colorWarning: #ffc107;
+
+.testoGiallo {
+  color: $colorWarning;
+}
+
+#logo {
+  width: 50px;
+  background: $colorWarning;
+}
+
+@mixin sfondo {
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity));
+  --bs-bg-opacity: 1;
+  color: white;
+  &:hover {
+    color: black;
+  }
+}
+
+.sfondo {
+  @include sfondo();
+}
+
+@mixin dimensioniImg($larghezza, $altezza) {
+  width: $larghezza;
+  height: $altezza;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.immagine {
+  @include dimensioniImg(100%, 646px);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+.coloreSfondo {
+  background-color: black;
+}
+
+#para {
+  color: $colorWarning;
+  font-family: "Vesper Libre", serif;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  animation: myAnim 3s linear 0 infinite;
+}
+
+div.coloreSfondo {
+  height: 700px;
+}
